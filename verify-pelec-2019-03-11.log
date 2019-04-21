@@ -1,0 +1,344 @@
+Mon Mar 11 10:43:27 MDT 2019
+======================================================
+Job is running on rhodes.hpc.nrel.gov
+======================================================
++ module unuse /opt/software/modules/gcc-7.3.0:/opt/utilities/modules:/opt/compilers/modules:/home/jrood/spack/share/spack/modules/linux-centos7-x86_64
++ module use /opt/compilers/modules
++ module use /opt/utilities/modules
++ module use /opt/software/modules/gcc-7.3.0
++ module purge
++ module load gcc/7.3.0
++ module load openmpi
++ module load git
++ module load rsync
++ module load masa
++ module load python/3.6.5
++ module load py-matplotlib/2.2.3-py3
++ module load py-six/1.11.0-py3
++ module load py-numpy/1.14.3-py3
++ module load py-pyparsing/2.2.0-py3
++ module load py-cycler/0.10.0-py3
++ module load py-dateutil/2.5.2-py3
++ module load py-bottleneck/1.2.1-py3
++ module load py-cython/0.29-py3
++ module load py-nose/1.3.7-py3
++ module load py-numexpr/2.6.5-py3
++ module load py-packaging/17.1-py3
++ module load py-pandas/0.23.4-py3
++ module load py-pillow/5.1.0-py3
++ module load py-pytz/2017.2-py3
++ module load py-setuptools/40.4.3-py3
++ module load py-kiwisolver/1.0.1-py3
+======================================================
+Outputting module list:
+======================================================
++ module list
+Currently Loaded Modulefiles:
+  1) gcc/7.3.0                 12) py-dateutil/2.5.2-py3
+  2) openmpi/3.1.3             13) py-bottleneck/1.2.1-py3
+  3) git/2.19.1                14) py-cython/0.29-py3
+  4) rsync/3.1.3               15) py-nose/1.3.7-py3
+  5) masa/master               16) py-numexpr/2.6.5-py3
+  6) python/3.6.5              17) py-packaging/17.1-py3
+  7) py-matplotlib/2.2.3-py3   18) py-pandas/0.23.4-py3
+  8) py-six/1.11.0-py3         19) py-pillow/5.1.0-py3
+  9) py-numpy/1.14.3-py3       20) py-pytz/2017.2-py3
+ 10) py-pyparsing/2.2.0-py3    21) py-setuptools/40.4.3-py3
+ 11) py-cycler/0.10.0-py3      22) py-kiwisolver/1.0.1-py3
+======================================================
++ export AMREX_HOME=/projects/ecp/combustion/pelec-testing/amrex
++ export PELEC_HOME=/projects/ecp/combustion/pelec-testing/PeleC
++ export PELE_PHYSICS_HOME=/projects/ecp/combustion/pelec-testing/PelePhysics
++ export MASA_HOME=/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/masa-master-3y4s4hyml5h3zmbxibszygqrnlfd72oj
+
+======================================================
+Running verification:
+======================================================
++ ls -alh /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS1/PeleC3d.gnu.TEST.MPI.ex
+-rwxr-xr-x. 1 jrood exact 61M Mar 11 06:02 /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS1/PeleC3d.gnu.TEST.MPI.ex
++ ls -alh /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS4/PeleC2d.gnu.TEST.MPI.ex
+-rwxr-xr-x. 1 jrood exact 61M Mar 11 06:03 /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS4/PeleC2d.gnu.TEST.MPI.ex
++ ls -alh /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS5/PeleC1d.gnu.TEST.MPI.ex
+-rwxr-xr-x. 1 jrood exact 61M Mar 11 06:04 /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS5/PeleC1d.gnu.TEST.MPI.ex
++ ls -alh /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS6/PeleC3d.gnu.TEST.MPI.ex
+-rwxr-xr-x. 1 jrood exact 77M Mar 11 06:04 /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS6/PeleC3d.gnu.TEST.MPI.ex
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/symmetry_3d
++ rm -rf chk00000 chk00100 plt00000 plt00100 datlog mmslog
++ rm '/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_1d/*.png'
+rm: cannot remove ‘/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_1d/*.png’: No such file or directory
++ true
++ mpirun --use-hwthread-cpus --oversubscribe -n 4 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS1/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_1d/8
++ rm -rf chk00000 chk00181 plt00000 plt00181 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_1d/16
++ rm -rf chk00000 chk00699 plt00000 plt00699 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_1d/64
++ rm -rf chk00000 chk11094 plt00000 plt11094 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_1d/128
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_1d/32
++ rm -rf chk00000 chk44313 plt00000 plt44313 datlog mmslog
++ rm -rf chk00000 chk02790 plt00000 plt02790 datlog mmslog
++ mpirun --use-hwthread-cpus --oversubscribe -n 1 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS5/PeleC1d.gnu.TEST.MPI.ex inputs_1d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 1 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS5/PeleC1d.gnu.TEST.MPI.ex inputs_1d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 1 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS5/PeleC1d.gnu.TEST.MPI.ex inputs_1d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 2 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS5/PeleC1d.gnu.TEST.MPI.ex inputs_1d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 4 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS5/PeleC1d.gnu.TEST.MPI.ex inputs_1d'
++ rm '/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_2d/*.png'
+rm: cannot remove ‘/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_2d/*.png’: No such file or directory
++ true
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_2d/16
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_2d/8
++ rm -rf chk00000 chk01422 plt00000 plt01422 datlog mmslog
++ rm -rf chk00000 chk00372 plt00000 plt00372 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_2d/64
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_2d/32
++ rm -rf chk00000 chk22308 plt00000 plt22308 datlog mmslog
++ rm -rf chk00000 chk05653 plt00000 plt05653 datlog mmslog
++ mpirun --use-hwthread-cpus --oversubscribe -n 1 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS4/PeleC2d.gnu.TEST.MPI.ex inputs_2d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 4 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS4/PeleC2d.gnu.TEST.MPI.ex inputs_2d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 8 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS4/PeleC2d.gnu.TEST.MPI.ex inputs_2d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 8 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS4/PeleC2d.gnu.TEST.MPI.ex inputs_2d'
++ rm '/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_3d/*.png'
+rm: cannot remove ‘/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_3d/*.png’: No such file or directory
++ true
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_3d/8
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_3d/16
++ rm -rf chk00000 chk02152 plt00000 plt02152 datlog mmslog
++ rm -rf chk00000 chk00611 plt00000 plt00611 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_3d/32
++ rm -rf chk00000 chk08515 plt00000 plt08515 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_3d/64
++ rm -rf chk00000 chk33544 plt00000 plt33544 datlog mmslog
++ mpirun --use-hwthread-cpus --oversubscribe -n 1 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS1/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 8 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS1/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 24 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS1/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 64 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS1/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ rm '/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_3d/*.png'
+rm: cannot remove ‘/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_3d/*.png’: No such file or directory
++ true
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_3d/8
++ rm -rf chk00000 chk00609 plt00000 plt00609 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_3d/16
++ rm -rf chk00000 chk02139 plt00000 plt02139 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_3d/32
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_3d/64
++ rm -rf chk00000 chk08451 plt00000 plt08451 datlog mmslog
++ rm -rf chk00000 chk33395 plt00000 plt33395 datlog mmslog
++ mpirun --use-hwthread-cpus --oversubscribe -n 1 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS6/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 8 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS6/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 24 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS6/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 64 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS6/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ rm '/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_2d/*.png'
+rm: cannot remove ‘/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_2d/*.png’: No such file or directory
++ true
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_2d/8
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_2d/16
++ rm -rf chk00000 chk00361 plt00000 plt00361 datlog mmslog
++ rm -rf chk00000 chk01433 plt00000 plt01433 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_2d/32
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_2d/64
++ rm -rf chk00000 chk05622 plt00000 plt05622 datlog mmslog
++ rm -rf chk00000 chk22236 plt00000 plt22236 datlog mmslog
++ mpirun --use-hwthread-cpus --oversubscribe -n 1 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS7/PeleC2d.gnu.TEST.MPI.ex inputs_2d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 4 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS7/PeleC2d.gnu.TEST.MPI.ex inputs_2d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 8 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS7/PeleC2d.gnu.TEST.MPI.ex inputs_2d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 8 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS7/PeleC2d.gnu.TEST.MPI.ex inputs_2d'
++ rm '/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_amr_3d/*.png'
+rm: cannot remove ‘/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_amr_3d/*.png’: No such file or directory
++ true
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_amr_3d/8
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_amr_3d/16
++ rm -rf chk00000 chk00696 plt00000 plt00696 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_amr_3d/32
++ rm -rf chk00000 chk04429 plt00000 plt04429 datlog mmslog
++ rm -rf chk00000 chk17285 plt00000 plt17285 datlog mmslog
++ mpirun --use-hwthread-cpus --oversubscribe -n 1 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS1/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 16 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS1/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 64 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-03-11/MMS1/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ img=build-status.svg
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms
++ rm build-status.svg
++ nosetests
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 14.608s
+
+OK
++ '[' 0 -eq 0 ']'
++ cp build-pass.svg build-status.svg
+======================================================
+Done running verification.
+======================================================
+
+======================================================
+Pushing test results to github repo:
+======================================================
++ cd /projects/ecp/combustion/pelec-testing/PeleVerificationResults-Peregrine/
++ git --version
+git version 2.19.1
+
+
+Doing rsync to verification results repo...
++ rsync -avhW0 --include 'pelec_verification.o*' --exclude '*8*' --exclude '*16*' --exclude '*32*' --exclude '*64*' --exclude '*128*' --exclude '*.py*' --exclude '*tests*' --exclude '*.sh' --exclude 'requirements*' --exclude '*.pbs' --exclude build-pass.svg --exclude build-fail.svg --exclude .git --delete /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/ /projects/ecp/combustion/pelec-testing/PeleVerificationResults-Peregrine/
+sending incremental file list
+./
+build-status.svg
+hashes.txt
+verify-pelec-2019-03-11.log
+cns_amr_3d/
+cns_amr_3d/p_error.png
+cns_amr_3d/rho_error.png
+cns_amr_3d/u_error.png
+cns_amr_3d/v_error.png
+cns_amr_3d/w_error.png
+cns_noamr_1d/
+cns_noamr_1d/p_error.png
+cns_noamr_1d/rho_error.png
+cns_noamr_1d/u_error.png
+cns_noamr_2d/
+cns_noamr_2d/p_error.png
+cns_noamr_2d/rho_error.png
+cns_noamr_2d/u_error.png
+cns_noamr_2d/v_error.png
+cns_noamr_3d/
+cns_noamr_3d/p_error.png
+cns_noamr_3d/rho_error.png
+cns_noamr_3d/u_error.png
+cns_noamr_3d/v_error.png
+cns_noamr_3d/w_error.png
+cns_noamr_mol_2d/
+cns_noamr_mol_2d/p_error.png
+cns_noamr_mol_2d/rho_error.png
+cns_noamr_mol_2d/u_error.png
+cns_noamr_mol_2d/v_error.png
+cns_noamr_mol_3d/
+cns_noamr_mol_3d/p_error.png
+cns_noamr_mol_3d/rho_error.png
+cns_noamr_mol_3d/u_error.png
+cns_noamr_mol_3d/v_error.png
+cns_noamr_mol_3d/w_error.png
+symmetry_3d/
+symmetry_3d/datlog
+symmetry_3d/mms.out
+symmetry_3d/mmslog
+symmetry_3d/chk00000/
+symmetry_3d/chk00000/CPUtime
+symmetry_3d/chk00000/FabArrayHeaders.txt
+symmetry_3d/chk00000/Header
+symmetry_3d/chk00000/PeleCHeader
+symmetry_3d/chk00000/Level_0/
+symmetry_3d/chk00000/Level_0/SD_0_New_MF_D_00000
+symmetry_3d/chk00000/Level_0/SD_0_New_MF_H
+symmetry_3d/chk00100/
+symmetry_3d/chk00100/CPUtime
+symmetry_3d/chk00100/FabArrayHeaders.txt
+symmetry_3d/chk00100/Header
+symmetry_3d/chk00100/PeleCHeader
+symmetry_3d/chk00100/Level_0/
+symmetry_3d/chk00100/Level_0/SD_0_New_MF_D_00000
+symmetry_3d/chk00100/Level_0/SD_0_New_MF_H
+symmetry_3d/plt00000/
+symmetry_3d/plt00000/Header
+symmetry_3d/plt00000/job_info
+symmetry_3d/plt00000/Level_0/
+symmetry_3d/plt00000/Level_0/Cell_D_00000
+symmetry_3d/plt00000/Level_0/Cell_H
+symmetry_3d/plt00100/
+symmetry_3d/plt00100/Header
+symmetry_3d/plt00100/job_info
+symmetry_3d/plt00100/Level_0/
+symmetry_3d/plt00100/Level_0/Cell_D_00000
+symmetry_3d/plt00100/Level_0/Cell_H
+
+sent 1.11M bytes  received 1.12K bytes  2.22M bytes/sec
+total size is 1.13M  speedup is 1.02
+
+
+Performing git history cleaning...
++ git checkout --orphan newBranch
+Switched to a new branch 'newBranch'
+M	build-status.svg
+M	hashes.txt
+M	symmetry_3d/chk00000/CPUtime
+M	symmetry_3d/chk00100/CPUtime
+M	symmetry_3d/mms.out
+M	symmetry_3d/plt00000/job_info
+M	symmetry_3d/plt00100/job_info
++ git add -A
++ git commit -m "Adding verification results for Mon Mar 11 22:45:33 MDT 2019"
+[newBranch (root-commit) 593d111] Adding verification results for Mon Mar 11 22:45:33 MDT 2019
+ 63 files changed, 5255 insertions(+)
+ create mode 100644 LICENSE
+ create mode 100644 README.rst
+ create mode 100644 build-status.svg
+ create mode 100644 cns_amr_3d/p_error.png
+ create mode 100644 cns_amr_3d/rho_error.png
+ create mode 100644 cns_amr_3d/sixtyfour/grids_file
+ create mode 100644 cns_amr_3d/sixtyfour/inputs_3d
+ create mode 100644 cns_amr_3d/sixtyfour/probin
+ create mode 100644 cns_amr_3d/u_error.png
+ create mode 100644 cns_amr_3d/v_error.png
+ create mode 100644 cns_amr_3d/w_error.png
+ create mode 100644 cns_noamr_1d/README.rst
+ create mode 100644 cns_noamr_1d/p_error.png
+ create mode 100644 cns_noamr_1d/rho_error.png
+ create mode 100644 cns_noamr_1d/u_error.png
+ create mode 100644 cns_noamr_2d/README.rst
+ create mode 100644 cns_noamr_2d/p_error.png
+ create mode 100644 cns_noamr_2d/rho_error.png
+ create mode 100644 cns_noamr_2d/u_error.png
+ create mode 100644 cns_noamr_2d/v_error.png
+ create mode 100644 cns_noamr_3d/p_error.png
+ create mode 100644 cns_noamr_3d/rho_error.png
+ create mode 100644 cns_noamr_3d/u_error.png
+ create mode 100644 cns_noamr_3d/v_error.png
+ create mode 100644 cns_noamr_3d/w_error.png
+ create mode 100644 cns_noamr_mol_2d/README.rst
+ create mode 100644 cns_noamr_mol_2d/p_error.png
+ create mode 100644 cns_noamr_mol_2d/rho_error.png
+ create mode 100644 cns_noamr_mol_2d/u_error.png
+ create mode 100644 cns_noamr_mol_2d/v_error.png
+ create mode 100644 cns_noamr_mol_3d/README.rst
+ create mode 100644 cns_noamr_mol_3d/p_error.png
+ create mode 100644 cns_noamr_mol_3d/rho_error.png
+ create mode 100644 cns_noamr_mol_3d/u_error.png
+ create mode 100644 cns_noamr_mol_3d/v_error.png
+ create mode 100644 cns_noamr_mol_3d/w_error.png
+ create mode 100644 hashes.txt
+ create mode 100644 symmetry_3d/chk00000/CPUtime
+ create mode 100644 symmetry_3d/chk00000/FabArrayHeaders.txt
+ create mode 100644 symmetry_3d/chk00000/Header
+ create mode 100644 symmetry_3d/chk00000/Level_0/SD_0_New_MF_D_00000
+ create mode 100644 symmetry_3d/chk00000/Level_0/SD_0_New_MF_H
+ create mode 100644 symmetry_3d/chk00000/PeleCHeader
+ create mode 100644 symmetry_3d/chk00100/CPUtime
+ create mode 100644 symmetry_3d/chk00100/FabArrayHeaders.txt
+ create mode 100644 symmetry_3d/chk00100/Header
+ create mode 100644 symmetry_3d/chk00100/Level_0/SD_0_New_MF_D_00000
+ create mode 100644 symmetry_3d/chk00100/Level_0/SD_0_New_MF_H
+ create mode 100644 symmetry_3d/chk00100/PeleCHeader
+ create mode 100644 symmetry_3d/datlog
+ create mode 100644 symmetry_3d/inputs_3d
+ create mode 100644 symmetry_3d/mms.out
+ create mode 100644 symmetry_3d/mmslog
+ create mode 100644 symmetry_3d/plt00000/Header
+ create mode 100644 symmetry_3d/plt00000/Level_0/Cell_D_00000
+ create mode 100644 symmetry_3d/plt00000/Level_0/Cell_H
+ create mode 100644 symmetry_3d/plt00000/job_info
+ create mode 100644 symmetry_3d/plt00100/Header
+ create mode 100644 symmetry_3d/plt00100/Level_0/Cell_D_00000
+ create mode 100644 symmetry_3d/plt00100/Level_0/Cell_H
+ create mode 100644 symmetry_3d/plt00100/job_info
+ create mode 100644 symmetry_3d/probin
+ create mode 100644 verify-pelec-2019-03-11.log
++ git branch -D master
+Deleted branch master (was d05672e).
++ git branch -m master
++ git gc --aggressive --prune=all
++ git push -f origin master
+To github.com:jrood-nrel/PeleVerificationResults-Peregrine.git
+ + 08a40c1...593d111 master -> master (forced update)
+
+
+Done posting test results.
+Mon Mar 11 22:45:37 MDT 2019

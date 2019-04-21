@@ -1,0 +1,24 @@
+MPI initialized with 4 MPI processes
+AMReX (19.04.2-253-g0bcbec1dbd84) initialized
+
+amrex::Error::3::operator>>(istream&,IntVect&): expected '(' !!!
+Starting run at 14:00:04 UTC on 2019-04-21.
+amrex::ErrorSIGABRT
+::2::operator>>(istream&,IntVect&): expected '(' !!!
+amrex::SIGABRT
+Error::1::operator>>(istream&,IntVect&): expected '(' !!!
+amrex::Error::0::operator>>(istream&,IntVect&): expected '(' !!!
+SIGABRT
+SIGABRT
+See Backtrace.1 file for details
+See Backtrace.0 file for details
+See Backtrace.3 file for details
+See Backtrace.2 file for details
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 1 in communicator MPI_COMM_WORLD
+with errorcode 6.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------

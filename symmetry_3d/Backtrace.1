@@ -1,0 +1,53 @@
+=== If no file names and line numbers are shown below, one can run
+            addr2line -Cpfie my_exefile my_line_address
+    to convert `my_line_address` (e.g., 0x4a6b) into file name and line number.
+
+=== Please note that the line number reported by addr2line may not be accurate.
+    One can use
+            readelf -wl my_exefile | grep my_line_address'
+    to find out the offset for that line.
+
+ 0: /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex() [0x50c156]
+    amrex::BLBackTrace::print_backtrace_info(_IO_FILE*) at /projects/ecp/combustion/pelec-testing/amrex//Src/Base/AMReX_BLBackTrace.cpp:108
+
+ 1: /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex() [0x50da72]
+    amrex::BLBackTrace::handler(int) at /projects/ecp/combustion/pelec-testing/amrex//Src/Base/AMReX_BLBackTrace.cpp:55
+
+ 2: /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex() [0x4954fe]
+    amrex::operator>>(std::istream&, amrex::IntVect&) at /projects/ecp/combustion/pelec-testing/amrex//Src/Base/AMReX_IntVect.cpp:65
+
+ 3: /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex() [0x41ffca]
+    bool amrex::(anonymous namespace)::is<amrex::IntVect>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, amrex::IntVect&) at /projects/ecp/combustion/pelec-testing/amrex//Src/Base/AMReX_ParmParse.cpp:150
+
+ 4: /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex() [0x42a29a]
+    bool amrex::(anonymous namespace)::(anonymous namespace)::squeryarr<amrex::IntVect>(std::__cxx11::list<amrex::ParmParse::PP_entry, std::allocator<amrex::ParmParse::PP_entry> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<amrex::IntVect, std::allocator<amrex::IntVect> >&, int, int, int) [clone .constprop.332] at /projects/ecp/combustion/pelec-testing/amrex//Src/Base/AMReX_ParmParse.cpp:789
+
+ 5: /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex() [0x42a525]
+    amrex::ParmParse::getarr(char const*, std::vector<amrex::IntVect, std::allocator<amrex::IntVect> >&, int, int) const at /projects/ecp/combustion/pelec-testing/amrex//Src/Base/AMReX_ParmParse.cpp:822 (discriminator 4)
+     (inlined by) amrex::ParmParse::getarr(char const*, std::vector<amrex::IntVect, std::allocator<amrex::IntVect> >&, int, int) const at /projects/ecp/combustion/pelec-testing/amrex//Src/Base/AMReX_ParmParse.cpp:1668 (discriminator 4)
+
+ 6: /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex() [0x5bed58]
+    amrex::AmrMesh::InitAmrMesh(int, amrex::Vector<int, std::allocator<int> > const&, std::vector<int, std::allocator<int> >) at /projects/ecp/combustion/pelec-testing/amrex//Src/AmrCore/AMReX_AmrMesh.cpp:107
+
+ 7: /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex() [0x5c1ded]
+    std::vector<int, std::allocator<int> >::~vector() at /opt/compilers/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-4.8.5/gcc-7.3.0-6xrl2ywol6kblox5myhllykoe67y7a5e/include/c++/7.3.0/bits/stl_vector.h:434
+     (inlined by) amrex::AmrMesh::AmrMesh() at /projects/ecp/combustion/pelec-testing/amrex//Src/AmrCore/AMReX_AmrMesh.cpp:36
+
+ 8: /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex() [0x5816ee]
+    amrex::AmrCore::Initialize() at /projects/ecp/combustion/pelec-testing/amrex//Src/AmrCore/AMReX_AmrCore.cpp:26
+     (inlined by) amrex::AmrCore::AmrCore() at /projects/ecp/combustion/pelec-testing/amrex//Src/AmrCore/AMReX_AmrCore.cpp:39
+
+ 9: /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex() [0x526884]
+    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_local_data() at /opt/compilers/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-4.8.5/gcc-7.3.0-6xrl2ywol6kblox5myhllykoe67y7a5e/include/c++/7.3.0/bits/basic_string.h:182
+     (inlined by) std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string() at /opt/compilers/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-4.8.5/gcc-7.3.0-6xrl2ywol6kblox5myhllykoe67y7a5e/include/c++/7.3.0/bits/basic_string.h:422
+     (inlined by) amrex::Amr::Amr() at /projects/ecp/combustion/pelec-testing/amrex//Src/Amr/AMReX_Amr.cpp:234
+
+10: /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex() [0x413dd9]
+    main at /projects/ecp/combustion/pelec-testing/PeleC/Source/main.cpp:136 (discriminator 3)
+
+11: /lib64/libc.so.6(__libc_start_main+0xf5) [0x7f305efa3c05]
+    ?? ??:0
+
+12: /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex() [0x41483d]
+    _start at ??:?
+

@@ -1,0 +1,339 @@
+Sun Apr 21 08:00:02 MDT 2019
+======================================================
+Job is running on rhodes.hpc.nrel.gov
+======================================================
++ module unuse /opt/software/modules/gcc-7.3.0:/opt/utilities/modules:/opt/compilers/modules
++ module use /opt/compilers/modules
++ module use /opt/utilities/modules
++ module use /opt/software/modules/gcc-7.3.0
++ module purge
++ module load gcc/7.3.0
++ module load openmpi
++ module load git
++ module load rsync
++ module load masa
++ module load python/3.6.5
++ module load py-matplotlib/2.2.3-py3
++ module load py-six/1.11.0-py3
++ module load py-numpy/1.14.3-py3
++ module load py-pyparsing/2.2.0-py3
++ module load py-cycler/0.10.0-py3
++ module load py-dateutil/2.5.2-py3
++ module load py-bottleneck/1.2.1-py3
++ module load py-cython/0.29-py3
++ module load py-nose/1.3.7-py3
++ module load py-numexpr/2.6.5-py3
++ module load py-packaging/17.1-py3
++ module load py-pandas/0.23.4-py3
++ module load py-pillow/5.1.0-py3
++ module load py-pytz/2017.2-py3
++ module load py-setuptools/40.4.3-py3
++ module load py-kiwisolver/1.0.1-py3
+======================================================
+Outputting module list:
+======================================================
++ module list
+Currently Loaded Modulefiles:
+  1) gcc/7.3.0                 12) py-dateutil/2.5.2-py3
+  2) openmpi/3.1.3             13) py-bottleneck/1.2.1-py3
+  3) git/2.19.1                14) py-cython/0.29-py3
+  4) rsync/3.1.3               15) py-nose/1.3.7-py3
+  5) masa/master               16) py-numexpr/2.6.5-py3
+  6) python/3.6.5              17) py-packaging/17.1-py3
+  7) py-matplotlib/2.2.3-py3   18) py-pandas/0.23.4-py3
+  8) py-six/1.11.0-py3         19) py-pillow/5.1.0-py3
+  9) py-numpy/1.14.3-py3       20) py-pytz/2017.2-py3
+ 10) py-pyparsing/2.2.0-py3    21) py-setuptools/40.4.3-py3
+ 11) py-cycler/0.10.0-py3      22) py-kiwisolver/1.0.1-py3
+======================================================
++ export AMREX_HOME=/projects/ecp/combustion/pelec-testing/amrex
++ export PELEC_HOME=/projects/ecp/combustion/pelec-testing/PeleC
++ export PELE_PHYSICS_HOME=/projects/ecp/combustion/pelec-testing/PelePhysics
++ export MASA_HOME=/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/masa-master-3y4s4hyml5h3zmbxibszygqrnlfd72oj
+
+======================================================
+Running verification:
+======================================================
++ ls -alh /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex
+-rwxr-xr-x. 1 jrood exact 62M Apr 21 06:02 /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex
++ ls -alh /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS4/PeleC2d.gnu.TEST.MPI.ex
+-rwxr-xr-x. 1 jrood exact 61M Apr 21 06:03 /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS4/PeleC2d.gnu.TEST.MPI.ex
++ ls -alh /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS5/PeleC1d.gnu.TEST.MPI.ex
+-rwxr-xr-x. 1 jrood exact 61M Apr 21 06:03 /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS5/PeleC1d.gnu.TEST.MPI.ex
++ ls -alh /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS6/PeleC3d.gnu.TEST.MPI.ex
+-rwxr-xr-x. 1 jrood exact 78M Apr 21 06:04 /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS6/PeleC3d.gnu.TEST.MPI.ex
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/symmetry_3d
++ rm -rf chk00000 chk00100 plt00000 plt00100 datlog mmslog
++ rm /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_1d/p_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_1d/rho_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_1d/u_error.png
++ mpirun --use-hwthread-cpus --oversubscribe -n 4 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_1d/8
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_1d/16
++ rm -rf chk00000 chk00181 plt00000 plt00181 datlog mmslog
++ rm -rf chk00000 chk00699 plt00000 plt00699 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_1d/32
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_1d/64
++ rm -rf chk00000 chk02790 plt00000 plt02790 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_1d/128
++ rm -rf chk00000 chk11094 plt00000 plt11094 datlog mmslog
++ rm -rf chk00000 chk44313 plt00000 plt44313 datlog mmslog
++ mpirun --use-hwthread-cpus --oversubscribe -n 1 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS5/PeleC1d.gnu.TEST.MPI.ex inputs_1d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 1 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS5/PeleC1d.gnu.TEST.MPI.ex inputs_1d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 1 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS5/PeleC1d.gnu.TEST.MPI.ex inputs_1d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 2 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS5/PeleC1d.gnu.TEST.MPI.ex inputs_1d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 4 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS5/PeleC1d.gnu.TEST.MPI.ex inputs_1d'
++ rm /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_2d/p_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_2d/rho_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_2d/u_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_2d/v_error.png
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_2d/8
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_2d/16
++ rm -rf chk00000 chk00372 plt00000 plt00372 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_2d/32
++ rm -rf chk00000 chk01422 plt00000 plt01422 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_2d/64
++ rm -rf chk00000 chk05653 plt00000 plt05653 datlog mmslog
++ rm -rf chk00000 chk22308 plt00000 plt22308 datlog mmslog
++ mpirun --use-hwthread-cpus --oversubscribe -n 1 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS4/PeleC2d.gnu.TEST.MPI.ex inputs_2d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 4 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS4/PeleC2d.gnu.TEST.MPI.ex inputs_2d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 8 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS4/PeleC2d.gnu.TEST.MPI.ex inputs_2d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 8 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS4/PeleC2d.gnu.TEST.MPI.ex inputs_2d'
++ rm /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_3d/p_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_3d/rho_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_3d/u_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_3d/v_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_3d/w_error.png
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_3d/8
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_3d/32
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_3d/16
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_3d/64
++ rm -rf chk00000 chk08515 plt00000 plt08515 datlog mmslog
++ rm -rf chk00000 chk00611 plt00000 plt00611 datlog mmslog
++ rm -rf chk00000 chk33544 plt00000 plt33544 datlog mmslog
++ rm -rf chk00000 chk02152 plt00000 plt02152 datlog mmslog
++ mpirun --use-hwthread-cpus --oversubscribe -n 1 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 8 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 24 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 64 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ rm /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_3d/p_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_3d/rho_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_3d/u_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_3d/v_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_3d/w_error.png
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_3d/8
++ rm -rf chk00000 chk00609 plt00000 plt00609 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_3d/16
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_3d/32
++ rm -rf chk00000 chk02139 plt00000 plt02139 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_3d/64
++ rm -rf chk00000 chk08451 plt00000 plt08451 datlog mmslog
++ rm -rf chk00000 chk33395 plt00000 plt33395 datlog mmslog
++ mpirun --use-hwthread-cpus --oversubscribe -n 1 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS6/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 8 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS6/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 24 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS6/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 64 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS6/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ rm /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_2d/p_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_2d/rho_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_2d/u_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_2d/v_error.png
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_2d/8
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_2d/16
++ rm -rf chk00000 chk00361 plt00000 plt00361 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_2d/32
++ rm -rf chk00000 chk01433 plt00000 plt01433 datlog mmslog
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_2d/64
++ rm -rf chk00000 chk05622 plt00000 plt05622 datlog mmslog
++ rm -rf chk00000 chk22236 plt00000 plt22236 datlog mmslog
++ mpirun --use-hwthread-cpus --oversubscribe -n 1 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS7/PeleC2d.gnu.TEST.MPI.ex inputs_2d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 4 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS7/PeleC2d.gnu.TEST.MPI.ex inputs_2d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 8 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS7/PeleC2d.gnu.TEST.MPI.ex inputs_2d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 8 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS7/PeleC2d.gnu.TEST.MPI.ex inputs_2d'
++ rm /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_amr_3d/p_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_amr_3d/rho_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_amr_3d/u_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_amr_3d/v_error.png /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_amr_3d/w_error.png
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_amr_3d/8
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_amr_3d/16
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_amr_3d/32
++ rm -rf chk00000 chk00696 plt00000 plt00696 datlog mmslog
++ rm -rf chk00000 chk04429 plt00000 plt04429 datlog mmslog
++ rm -rf chk00000 chk17285 plt00000 plt17285 datlog mmslog
++ mpirun --use-hwthread-cpus --oversubscribe -n 1 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 16 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ mpirun --use-hwthread-cpus --oversubscribe -n 64 /bin/bash -c 'ulimit -s 10240 && /projects/ecp/combustion/pelec-testing/PeleC-tests/2019-04-21/MMS1/PeleC3d.gnu.TEST.MPI.ex inputs_3d'
++ img=build-status.svg
++ cd /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms
++ rm build-status.svg
++ nosetests
+EEEEEEE
+======================================================================
+ERROR: Is the CNS with AMR PeleC second order accurate?
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/tests/test_mms.py", line 325, in test_cns_amr
+    edf = load_pelec_error(fdir, self.theory_order)
+  File "/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/tests/test_mms.py", line 102, in load_pelec_error
+    df = pd.read_csv(fname, delim_whitespace=True)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 678, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 440, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 787, in __init__
+    self._make_engine(self.engine)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 1014, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 1708, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 384, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 695, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: File b'/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_amr_3d/8/mmslog' does not exist
+-------------------- >> begin captured logging << --------------------
+matplotlib: DEBUG: $HOME=/home/jrood
+matplotlib: DEBUG: matplotlib data path /opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-matplotlib-2.2.3-4xtlisoi4x7mm4qovzxniqeoik3qmwbr/lib/python3.6/site-packages/matplotlib/mpl-data
+matplotlib: DEBUG: loaded rc file /opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-matplotlib-2.2.3-4xtlisoi4x7mm4qovzxniqeoik3qmwbr/lib/python3.6/site-packages/matplotlib/mpl-data/matplotlibrc
+matplotlib: DEBUG: matplotlib version 2.2.3
+matplotlib: DEBUG: interactive is False
+matplotlib: DEBUG: platform is linux
+matplotlib: DEBUG: loaded modules: ['builtins', 'sys', '_frozen_importlib', '_imp', '_warnings', '_thread', '_weakref', '_frozen_importlib_external', '_io', 'marshal', 'posix', 'zipimport', 'encodings', 'codecs', '_codecs', 'encodings.aliases', 'encodings.utf_8', '_signal', '__main__', 'encodings.latin_1', 'io', 'abc', '_weakrefset', '_bootlocale', '_locale', 'site', 'os', 'errno', 'stat', '_stat', 'posixpath', 'genericpath', 'os.path', '_collections_abc', '_sitebuiltins', 'sysconfig', '_sysconfigdata_m_linux_x86_64-linux-gnu', 're', 'enum', 'types', 'functools', '_functools', 'collections', 'operator', '_operator', 'keyword', 'heapq', '_heapq', 'itertools', 'reprlib', '_collections', 'weakref', 'collections.abc', 'sre_compile', '_sre', 'sre_parse', 'sre_constants', 'copyreg', 'pkg_resources', '__future__', 'time', 'zipfile', 'importlib', 'importlib._bootstrap', 'importlib._bootstrap_external', 'warnings', 'importlib.util', 'importlib.abc', 'importlib.machinery', 'contextlib', 'shutil', 'fnmatch', 'zlib', 'bz2', '_compression', 'threading', 'traceback', 'linecache', 'tokenize', 'token', '_bz2', 'pwd', 'grp', 'struct', '_struct', 'binascii', 'pkgutil', 'platform', 'subprocess', 'signal', '_posixsubprocess', 'select', 'selectors', 'math', 'plistlib', 'datetime', '_datetime', 'xml', 'xml.parsers', 'xml.parsers.expat', 'pyexpat.errors', 'pyexpat.model', 'pyexpat', 'xml.parsers.expat.model', 'xml.parsers.expat.errors', 'email', 'email.parser', 'email.feedparser', 'email.errors', 'email._policybase', 'email.header', 'email.quoprimime', 'string', '_string', 'email.base64mime', 'base64', 'email.charset', 'email.encoders', 'quopri', 'email.utils', 'random', 'hashlib', '_hashlib', '_blake2', '_sha3', 'bisect', '_bisect', '_random', 'socket', '_socket', 'urllib', 'urllib.parse', 'email._parseaddr', 'calendar', 'locale', 'tempfile', 'textwrap', 'inspect', 'ast', '_ast', 'dis', 'opcode', '_opcode', 'pkg_resources.extern', 'pkg_resources._vendor', 'pkg_resources.extern.six', 'pkg_resources._vendor.six', 'pkg_resources.extern.six.moves', 'pkg_resources._vendor.six.moves', 'pkg_resources.py31compat', 'pkg_resources.extern.appdirs', 'pkg_resources._vendor.packaging.__about__', 'pkg_resources.extern.packaging', 'pkg_resources.extern.packaging.version', 'pkg_resources.extern.packaging._structures', 'pkg_resources.extern.packaging.specifiers', 'pkg_resources.extern.packaging._compat', 'pkg_resources.extern.packaging.requirements', 'copy', 'pprint', 'pkg_resources.extern.pyparsing', 'pkg_resources.extern.six.moves.urllib', 'pkg_resources.extern.packaging.markers', 'nose', 'nose.core', 'logging', 'atexit', 'unittest', 'unittest.result', 'unittest.util', 'unittest.case', 'difflib', 'unittest.suite', 'unittest.loader', 'unittest.main', 'argparse', 'gettext', 'unittest.runner', 'unittest.signals', 'nose.config', 'optparse', 'configparser', 'nose.util', 'nose.pyversion', 'nose.plugins', 'nose.plugins.base', 'nose.plugins.manager', 'nose.failure', 'pickle', '_compat_pickle', '_pickle', 'nose.plugins.plugintest', 'multiprocessing', 'multiprocessing.context', 'multiprocessing.process', 'multiprocessing.reduction', 'array', '__mp_main__', 'nose.loader', 'nose.case', 'nose.importer', 'imp', 'nose.selector', 'nose.suite', 'nose.proxy', 'nose.result', 'nose.exc', 'nose.plugins.skip', 'nose.plugins.errorclass', 'nose.plugins.deprecated', 'nose.tools', 'nose.tools.nontrivial', 'nose.tools.trivial', 'nose.plugins.builtin', 'nose.plugins.attrib', 'nose.plugins.capture', 'nose.plugins.logcapture', 'nose.plugins.cover', 'nose.plugins.debug', 'pdb', 'cmd', 'bdb', 'code', 'codeop', 'glob', 'nose.plugins.doctests', 'doctest', 'nose.plugins.isolate', 'nose.plugins.failuredetail', 'nose.inspector', 'nose.plugins.prof', 'nose.plugins.testid', 'nose.plugins.multiprocess', 'queue', 'nose.plugins.xunit', 'xml.sax', 'xml.sax.xmlreader', 'xml.sax.handler', 'xml.sax._exceptions', 'xml.sax.saxutils', 'urllib.request', 'http', 'http.client', 'email.message', 'uu', 'email._encoded_words', 'email.iterators', 'ssl', 'ipaddress', '_ssl', 'urllib.error', 'urllib.response', 'nose.plugins.allmodules', 'nose.plugins.collect', 'test_mms', 'numpy', 'numpy._globals', 'numpy.__config__', 'numpy.version', 'numpy._import_tools', 'numpy.add_newdocs', 'numpy.lib', 'numpy.lib.info', 'numpy.lib.type_check', 'numpy.core', 'numpy.core.info', 'numpy.core.multiarray', 'numpy.core.umath', 'numpy.core._internal', 'numpy.compat', 'numpy.compat._inspect', 'numpy.compat.py3k', 'pathlib', 'ntpath', 'ctypes', '_ctypes', 'ctypes._endian', 'numpy.core.numerictypes', 'numbers', 'numpy.core.numeric', 'numpy.core.fromnumeric', 'numpy.core._methods', 'numpy.core.arrayprint', 'numpy.core.defchararray', 'numpy.core.records', 'numpy.core.memmap', 'numpy.core.function_base', 'numpy.core.machar', 'numpy.core.getlimits', 'numpy.core.shape_base', 'numpy.core.einsumfunc', 'numpy.testing', 'numpy.testing.decorators', 'numpy.testing.nose_tools', 'numpy.testing.nose_tools.decorators', 'numpy.testing.nose_tools.utils', 'numpy.lib.utils', 'numpy.testing.nosetester', 'numpy.testing.nose_tools.nosetester', 'numpy.testing.utils', 'numpy.lib.ufunclike', 'numpy.lib.index_tricks', 'numpy.lib.function_base', 'numpy.lib.twodim_base', 'numpy.matrixlib', 'numpy.matrixlib.defmatrix', 'numpy.lib.stride_tricks', 'numpy.lib.mixins', 'numpy.lib.nanfunctions', 'numpy.lib.shape_base', 'numpy.lib.scimath', 'numpy.lib.polynomial', 'numpy.linalg', 'numpy.linalg.info', 'numpy.linalg.linalg', 'numpy.linalg.lapack_lite', 'numpy.linalg._umath_linalg', 'numpy.lib.arraysetops', 'numpy.lib.npyio', 'numpy.lib.format', 'numpy.lib._datasource', 'numpy.lib._iotools', 'numpy.lib.financial', 'decimal', '_decimal', 'numpy.lib.arrayterator', 'numpy.lib.arraypad', 'numpy.lib._version', 'numpy._distributor_init', 'numpy.fft', 'numpy.fft.info', 'numpy.fft.fftpack', 'numpy.fft.fftpack_lite', 'numpy.fft.helper', 'numpy.polynomial', 'numpy.polynomial.polynomial', 'numpy.polynomial.polyutils', 'numpy.polynomial._polybase', 'numpy.polynomial.chebyshev', 'numpy.polynomial.legendre', 'numpy.polynomial.hermite', 'numpy.polynomial.hermite_e', 'numpy.polynomial.laguerre', 'numpy.random', 'numpy.random.info', 'cython_runtime', 'mtrand', 'numpy.random.mtrand', 'numpy.ctypeslib', 'numpy.ma', 'numpy.ma.core', 'numpy.ma.extras', 'matplotlib', 'six', 'distutils', 'distutils.version', 'matplotlib.cbook', 'six.moves', 'gzip', 'matplotlib.cbook.deprecation', 'matplotlib.cbook._backports', 'matplotlib.compat', 'matplotlib.compat.subprocess', 'matplotlib.rcsetup', 'matplotlib.testing', 'matplotlib.fontconfig_pattern', 'pyparsing', 'matplotlib.colors', 'matplotlib._color_data', 'cycler', 'six.moves.urllib', 'six.moves.urllib.request', 'matplotlib._version', 'json', 'json.decoder', 'json.scanner', '_json', 'json.encoder', 'dateutil']
+matplotlib: DEBUG: CACHEDIR=/home/jrood/.cache/matplotlib
+matplotlib.font_manager: DEBUG: Using fontManager instance from /home/jrood/.cache/matplotlib/fontList.json
+matplotlib.backends: DEBUG: backend agg version v2.2
+--------------------- >> end captured logging << ---------------------
+
+======================================================================
+ERROR: Is the CNS no AMR (3D) PeleC second order accurate?
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/tests/test_mms.py", line 255, in test_cns_noamr
+    edf = load_pelec_error(fdir, self.theory_order)
+  File "/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/tests/test_mms.py", line 102, in load_pelec_error
+    df = pd.read_csv(fname, delim_whitespace=True)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 678, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 440, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 787, in __init__
+    self._make_engine(self.engine)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 1014, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 1708, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 384, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 695, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: File b'/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_3d/8/mmslog' does not exist
+
+======================================================================
+ERROR: Is the CNS no AMR (1D) PeleC second order accurate?
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/tests/test_mms.py", line 311, in test_cns_noamr_1d
+    edf = load_pelec_error(fdir, self.theory_order)
+  File "/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/tests/test_mms.py", line 102, in load_pelec_error
+    df = pd.read_csv(fname, delim_whitespace=True)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 678, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 440, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 787, in __init__
+    self._make_engine(self.engine)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 1014, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 1708, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 384, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 695, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: File b'/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_1d/8/mmslog' does not exist
+
+======================================================================
+ERROR: Is the CNS no AMR (2D) PeleC second order accurate?
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/tests/test_mms.py", line 283, in test_cns_noamr_2d
+    edf = load_pelec_error(fdir, self.theory_order)
+  File "/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/tests/test_mms.py", line 102, in load_pelec_error
+    df = pd.read_csv(fname, delim_whitespace=True)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 678, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 440, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 787, in __init__
+    self._make_engine(self.engine)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 1014, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 1708, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 384, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 695, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: File b'/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_2d/8/mmslog' does not exist
+
+======================================================================
+ERROR: Is the CNS no AMR (3D) with MOL PeleC second order accurate?
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/tests/test_mms.py", line 269, in test_cns_noamr_mol
+    edf = load_pelec_error(fdir, self.theory_order)
+  File "/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/tests/test_mms.py", line 102, in load_pelec_error
+    df = pd.read_csv(fname, delim_whitespace=True)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 678, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 440, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 787, in __init__
+    self._make_engine(self.engine)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 1014, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 1708, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 384, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 695, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: File b'/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_3d/8/mmslog' does not exist
+
+======================================================================
+ERROR: Is the CNS no AMR (2D) with MOL PeleC second order accurate?
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/tests/test_mms.py", line 297, in test_cns_noamr_mol_2d
+    edf = load_pelec_error(fdir, self.theory_order)
+  File "/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/tests/test_mms.py", line 102, in load_pelec_error
+    df = pd.read_csv(fname, delim_whitespace=True)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 678, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 440, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 787, in __init__
+    self._make_engine(self.engine)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 1014, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 1708, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 384, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 695, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: File b'/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/cns_noamr_mol_2d/8/mmslog' does not exist
+
+======================================================================
+ERROR: Is the MMS error symmetric with symmetric IC (u,v,w)?
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/tests/test_mms.py", line 244, in test_symmetry
+    df = pd.read_csv(fname, delim_whitespace=True)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 678, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 440, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 787, in __init__
+    self._make_engine(self.engine)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 1014, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+  File "/opt/software/2018-11-21/spack/opt/spack/linux-centos7-x86_64/gcc-7.3.0/py-pandas-0.23.4-rjulebknsw7mpmservs4hnnhkhqilwkq/lib/python3.6/site-packages/pandas/io/parsers.py", line 1708, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas/_libs/parsers.pyx", line 384, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 695, in pandas._libs.parsers.TextReader._setup_parser_source
+FileNotFoundError: File b'/projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/symmetry_3d/mmslog' does not exist
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.403s
+
+FAILED (errors=7)
++ '[' 1 -eq 0 ']'
++ cp build-fail.svg build-status.svg
+======================================================
+Done running verification.
+======================================================
+
+======================================================
+Pushing test results to github repo:
+======================================================
++ cd /projects/ecp/combustion/pelec-testing/PeleCVerificationResults/
++ git --version
+git version 2.19.1
+
+
+Doing rsync to verification results repo...
++ rsync -avhW0 --include 'pelec_verification.o*' --exclude '*8*' --exclude '*16*' --exclude '*32*' --exclude '*64*' --exclude '*128*' --exclude '*.py*' --exclude '*tests*' --exclude '*.sh' --exclude 'requirements*' --exclude '*.pbs' --exclude build-pass.svg --exclude build-fail.svg --exclude .git --delete /projects/ecp/combustion/pelec-testing/PeleRegressionTesting/NREL/pelec-mms/ /projects/ecp/combustion/pelec-testing/PeleCVerificationResults/
+sending incremental file list
+./
+build-status.svg
+hashes.txt
+verify-pelec-2019-04-14.log
